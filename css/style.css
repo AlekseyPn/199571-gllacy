@@ -3,3 +3,11 @@ body {
   background: #849d8f;
   color: #ffffff;
 }
+
+h2 {
+  font: 700 35px/41px 'Roboto', 'Arial', sans-serif;
+}
+
+h3 {
+  font: 700 24px/30px 'Roboto', 'Arial', sans-serif;
+}
