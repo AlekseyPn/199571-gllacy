@@ -1,4 +1,7 @@
 body {
+  margin: 0;
+  padding: 0;
+
   font: 700 16px/22px 'Roboto', 'Arial', sans-serif;
   background: #849d8f;
   color: #ffffff;
@@ -12,4 +15,119 @@ h2 {
 h3 {
   font-size: 24px;
   line-height: 30px;
+}
+
+.clearfix {
+  content: '';
+
+  display: table;
+  clear: both;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.header-nav {
+  width: 853px;
+  float: left;
+  margin-right: 26px;
+}
+
+.index-menu li {
+  display: inline-block;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.user-block {
+  width: 267px;
+  float: right;
+}
+
+.slider-h {
+  position: relative;
+
+  width: 1146px;
+  min-height: 500px;
+
+  background: #849d8f;
+
+}
+
+.index-content {
+  margin-bottom: 40px;
+}
+
+.index-content-left {
+  width: 560px;
+  float: left;
+  margin-right: 26px;
+}
+
+.index-content-right {
+  width: 560px;
+  float: right;
+}
+
+.product-box {
+  margin-bottom: 40px;
+}
+
+.product-item {
+  width: 267px;
+  float: left;
+  margin-right: 26px;
+}
+
+.product-item:last-child {
+  margin-right: 0;
+}
+
+.about-shop {
+  width: 1146px;
+  margin-bottom: 40px;
+}
+
+.map-box{
+  position: relative;
+
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.about-comp {
+  position: absolute;
+  top: 62px;
+  right: 27px;
+
+  background: #ffffff;
+  color: #000000;
+}
+
+.main-footer {
+  margin-top: 25px;
+}
+
+.footer-social {
+  width: 267px;
+  float: left;
+  margin-right: 26px;
+}
+
+.footer-documents {
+  width: 560px;
+  float: left;
+  margin-right: 26px;
+
+  text-align: center;
+}
+
+.footer-copyright {
+  width: 267px;
+  float: right;
 }
