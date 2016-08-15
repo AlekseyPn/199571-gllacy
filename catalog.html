@@ -9,17 +9,17 @@
   <body>
     <!-- Header -->
     <header class="main-header">
-     <div class="container">
-      <div class="header-logo">
-        <a href="index.html">
-          <img class="logo-img" src="img/logo-index.svg" alt="Глейси-шоп">
-        </a>
-      </div>
+      <div class="container clearfix">
       <nav class="header-nav">
-        <ul class="nav-list">
+        <ul class="index-menu">
+          <li>
+            <a href="#">
+              <img class="logo-img" src="img/logo-index.svg" alt="Глейси-шоп">
+            </a>
+          </li>
           <li><a href="#">Каталог</a>
-            <ul class="sub-nav-list">
-              <li class="nav-item_border"><a href="#">Новинки</a></li>
+            <ul class="sub-menu">
+              <li class="menu-item_border"><a href="#">Новинки</a></li>
               <li><a href="catalog.html">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
@@ -33,44 +33,50 @@
       <div class="user-block">
         <a class="search-btn" href="#"></a>
         <a class="user-login" href="#">Вход</a>
-        <a class="user-backet_product" href="#">2 товара</a>
+        <a class="user-backet" href="#">Пусто</a>
       </div>
       <div class="header-contact">
         <p>С 10 до 20 ежедневно</p>
-        <p class="contact-text_large">8 812 450-25-25</p>
+        <p>8 812 450-25-25</p>
       </div>
-     </div>
-    </header>
-    <!--  Main-content  -->
-    <main class="container">
       <div class="breadcrumbs">
-        <a href="#">Главная</a>
+        <a href="index.html">Главная</a>
         <a href="#">Каталог</a>
         <a href="#">Сливочное</a>
       </div>
+     </div>
+    </header>
+
+    <!--  Main-content  -->
+    <main class="container">
       <div class="filter-form">
         <h1>Сливочное мороженое</h1>
         <form class="filter" action="https://echo.htmlacademy.ru" method="post">
-          <div class="filter-line">
-            <div class="filter-item">
-              <p>Сортировка</p>
-              <p>
+          <div class="catalog-line filter-line">
+            <figure class="filter-item select-filter">
+              <legend>Сортировка</legend>
                <select class="sort-filter" name="filter-sort">
                 <option value="по популярности">по популярности</option>
                 <option value="сначала недорогие">сначала недорогие</option>
                 <option value="сначала дорогие">сначала дорогие</option>
                 <option value="по жирности">по жирности</option>
-                </select></p>
-            </div>
+               </select>
+            </figure>
 
-            <div class="filter-item">
-              <p>Цена: 100 руб. - 500 руб.</p>
-              <p><input type="range" name="price" min="100" max="500" step="50"></p>
-            </div>
 
-            <div class="filter-item">
-              <p>Жирность:</p>
-              <p>
+            <figure class="filter-item range-filter">
+              <legend>Цена:</legend>
+              <input class="min-price" type="text" name="filter-number" id="number-1" value="100 руб."> - <input type="text" name="filter-number" id="number-2" value="500 руб.">
+              <div class="range-controls">
+                <div class="range-line"><div class="line-inner"></div></div>
+                <div class="point min-point"></div>
+                <div class="point max-point"></div>
+              </div>
+            </figure>
+
+            <figure class="filter-item fat-filter">
+              <legend>Жирность:</legend>
+
                 <label for="radio-1">0%</label>
                 <input type="radio" name="fat-filter" id="radio-1">
 
@@ -82,13 +88,14 @@
 
                 <label for="radio-4">выше 30%</label>
                 <input type="radio" name="fat-filter" id="radio-4">
-              </p>
-            </div>
+
+            </figure>
           </div>
-          <div class="filter-line">
-            <div class="filter-item">
-              <p>Наполнители:</p>
-              <p>
+
+          <div class="catalog-line filter-line">
+            <figure class="filter-item supllem-filter">
+              <legend>Наполнители:</legend>
+
               <input type="checkbox" name="filler" id="filler-1" checked>
               <label for="filler-1">шоколадные</label>
 
@@ -103,13 +110,14 @@
 
               <input type="checkbox" name="filler" id="filler-5">
               <label for="filler-5">джемы</label>
-              </p>
-            </div>
+
+            </figure>
+            <button class="filter-btn" type="submit">Применить</button>
           </div>
-          <button class="filter-btn" type="submit">Применить</button>
+
         </form>
       </div>
-      <section class="catalog-box">
+      <section class="catalog-box clerafix">
        <div class="catalog-line">
           <article class="catalog-item">
             <div class="item-price_round">
@@ -237,7 +245,7 @@
           </article>
         </div>
       </section>
-      <div class="pagination">
+      <div class="paginator">
         <a class="prev" href="#"></a>
         <a class="link_hover-round" href="#">1</a>
         <a class="link_hover-round" href="#">2</a>
@@ -247,22 +255,24 @@
         <a class="next" href="#"></a>
       </div>
     </main>
-     <footer class="main-footer container">
-      <div class="footer-col social-box">
-        <a href="#" class="social-link link-tw"></a>
-        <a href="#" class="social-link link-inst"></a>
-        <a href="#" class="social-link link-fb"></a>
-        <a href="#" class="social-link link-vk"></a>
-      </div>
-      <div class="footer-col documents-box">
-        <a class="img-heart" href="#">Для поставщиков</a>
-        <a href="#">О производстве</a>
-        <a href="#">Наши документы</a>
-        <a href="#">Экологические стандарты</a>
-      </div>
-      <div class="footer-col copyright-box">
-        <a href="https://htmlacademy.ru/"><img src="img/foot-logo.svg" alt="HTMLacademy"></a>
-        <p>Сделано в HTML Academy © 2016</p>
+    <footer class="main-footer clearfix footer_border-top">
+     <div class="container">
+        <div class="footer-social">
+          <a class="social-link link-tw" href="#" >tw</a>
+          <a class="social-link link-inst" href="#">inst</a>
+          <a class="social-link link-fb" href="#" >fb</a>
+          <a class="social-link link-vk" href="#" >vk</a>
+        </div>
+        <div class="footer-documents">
+          <a class="img-heart" href="#">Для поставщиков</a>
+          <a href="#">Наши документы</a>
+          <a href="#">О производстве</a>
+          <a href="#">Экологические стандарты</a>
+        </div>
+        <div class="footer-copyright">
+          <a href="https://htmlacademy.ru/"><img src="img/foot-logo.svg" alt="HTMLacademy"></a>
+          <p>Сделано в HTML Academy © 2016</p>
+        </div>
       </div>
     </footer>
   </body>
