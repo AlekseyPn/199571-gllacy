@@ -49,6 +49,16 @@ h3 {
   float: right;
 }
 
+.header-contact {
+  width: 267px;
+  float: right;
+}
+
+.breadcrumbs {
+  width: 267px;
+  float: left;
+}
+
 .slider-h {
   position: relative;
 
@@ -109,6 +119,52 @@ h3 {
   color: #000000;
 }
 
+/*--Стили каталога--*/
+figure {
+  margin: 0;
+}
+
+.catalog-box {
+  margin-bottom: 70px;
+}
+
+.catalog-line {
+  width: 1146px;
+  margin-bottom: 25px;
+}
+
+.catalog-line:after {
+  content: '';
+
+  display: table;
+  clear: both;
+}
+
+.filter-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.catalog-item {
+  width: 267px;
+  float: left;
+  margin-right: 26px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.btn-catalog_hover {
+  display: none;
+}
+
+.paginator {
+  margin-bottom: 25px;
+
+  text-align: right;
+}
+
 .main-footer {
   margin-top: 25px;
 }
@@ -131,3 +187,5 @@ h3 {
   width: 267px;
   float: right;
 }
+
+
