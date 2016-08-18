@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -104,10 +109,10 @@ h3 {
 }
 
 .map-box{
-  position: relative;
-
   width: 1200px;
   margin: 0 auto;
+  max-height: 436px;
+
 }
 
 .about-comp {
@@ -166,7 +171,7 @@ figure {
 }
 
 .main-footer {
-  margin-top: 25px;
+  padding: 20px 0 15px;
 }
 
 .footer-social {
@@ -179,9 +184,28 @@ figure {
   width: 560px;
   float: left;
   margin-right: 26px;
+  padding: 15px 0;
 
   text-align: center;
+  vertical-align: middle;
+
+  box-sizing: border-box;
 }
+
+.document-item {
+  display: inline-block;
+  padding: 0 10px;
+
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.footer-documents a {
+  display: block;
+}
+
+
 
 .footer-copyright {
   width: 267px;
