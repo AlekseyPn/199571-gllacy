@@ -65,12 +65,14 @@ h3 {
   list-style: none;
 }
 
-.header-nav li {
+.header-nav > ul > li {
   display: inline-block;
   vertical-align: middle;
 
   font-size: 16px;
   line-height: 18px;
+
+  padding-bottom: 10px;
 }
 
 .header-nav a {
@@ -83,6 +85,8 @@ h3 {
 .header-nav .index-logo {
   padding: 0;
   padding-right: 14px;
+
+  background: none;
 }
 
 .header-nav .active-item:hover {
@@ -105,6 +109,7 @@ h3 {
   left: -7px;
   z-index: 999;
 
+  display: none;
   width: 144px;
   padding: 6px 0;
   margin: 0;
@@ -116,7 +121,7 @@ h3 {
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
-  opacity: 0;
+
 }
 
 .sub-menu li {
@@ -144,16 +149,16 @@ h3 {
   background: #ffffff url(../img/line.png) no-repeat bottom;
 }
 
-.sub-menu a:hover, a:focus {
+.sub-menu > li > a:hover {
   background: #fbded7;
 }
 
-.sub-menu a:active {
-  background:
+.sub-menu > li > a:active {
+  background: #f6b5a5;
 }
 
 .sub-item:hover .sub-menu {
-  opacity: 1;
+  display: block;
 }
 /*======================*/
 
