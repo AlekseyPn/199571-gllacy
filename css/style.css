@@ -1,13 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family:'Roboto';
+  src:url(../fonts/roboto.woff) format ('woff'), url(../fonts/roboto.woff2) format ('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src:url(../fonts/robotomedium.woff) format('woff'), url(../fonts/robotomedium.woff2) format('woff2');
 }
 
 body {
+  min-width: 768px;
   margin: 0;
   padding: 0;
 
   font: 700 16px/22px 'Roboto', 'Arial', sans-serif;
+
+
   background: #849d8f;
   color: #ffffff;
 }
@@ -35,19 +45,118 @@ h3 {
   padding: 0 27px;
 }
 
+.main-header {
+  margin-top: 10px;
+}
+
 .header-nav {
   width: 853px;
   float: left;
   margin-right: 26px;
 }
 
-.index-menu li {
+/*======Главное Меню======*/
+
+.header-nav > ul {
+  padding: 0;
+  margin: 0;
+
+  font-size: 0;
+  list-style: none;
+}
+
+.header-nav li {
   display: inline-block;
+  vertical-align: middle;
+
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.header-nav a {
+  display: block;
+  padding: 7px 11px 7px 14px;
+
+  color: #ffffff;
+}
+
+.header-nav .index-logo {
+  padding: 0;
+  padding-right: 14px;
+}
+
+.header-nav .active-item:hover {
+  padding: 7px 11px 7px 14px;
+
+  color: #000000;
+  text-decoration: none;
+
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.sub-item {
+  position: relative;
 }
 
 .sub-menu {
-  display: none;
+  position: absolute;
+  top: 37px;
+  left: -7px;
+  z-index: 999;
+
+  width: 144px;
+  padding: 6px 0;
+  margin: 0;
+
+  color: #000000;
+
+  background: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
+  opacity: 0;
 }
+
+.sub-menu li {
+  display: block;
+  margin: 4px 0;
+}
+
+.sub-menu a {
+  padding: 6px 22px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+
+}
+
+.sub-menu .new-good {
+  padding-bottom: 10px;
+
+  font-weight: bold;
+
+  background: #ffffff url(../img/line.png) no-repeat bottom;
+}
+
+.sub-menu a:hover, a:focus {
+  background: #fbded7;
+}
+
+.sub-menu a:active {
+  background:
+}
+
+.sub-item:hover .sub-menu {
+  opacity: 1;
+}
+/*======================*/
+
 
 .user-block {
   width: 267px;
@@ -109,6 +218,8 @@ h3 {
 }
 
 .map-box{
+  position: relative;
+
   width: 1200px;
   margin: 0 auto;
   max-height: 436px;
