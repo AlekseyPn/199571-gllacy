@@ -32,6 +32,11 @@ h3 {
   line-height: 30px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .clearfix {
   content: '';
 
@@ -55,9 +60,9 @@ h3 {
   margin-right: 26px;
 }
 
-/*======Главное Меню======*/
+/*======Главное Меню и общие стили хедера======*/
 
-.header-nav > ul {
+.header-nav ul {
   padding: 0;
   margin: 0;
 
@@ -65,9 +70,10 @@ h3 {
   list-style: none;
 }
 
-.header-nav > ul > li {
+.header-nav li {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  padding-top: 14px;
 
   font-size: 16px;
   line-height: 18px;
@@ -83,10 +89,16 @@ h3 {
 }
 
 .header-nav .index-logo {
-  padding: 0;
+  float: left;
+  padding-top: 0;
   padding-right: 14px;
 
   background: none;
+}
+
+.index-logo img {
+  width: 154px;
+  height: 64px;
 }
 
 .header-nav .active-item:hover {
@@ -99,24 +111,30 @@ h3 {
   border-radius: 15px;
 }
 
-.sub-item {
+.header-nav .active-item:active {
+  -webkit-box-shadow: inset 0px 2px 1px 0px rgba(105,105,105,1);
+  -moz-box-shadow: inset 0px 2px 1px 0px rgba(105,105,105,1);
+  box-shadow: inset 0px 2px 1px 0px rgba(105,105,105,1);;
+}
+
+ .sub-item {
   position: relative;
 }
 
-.sub-menu {
+.header-nav .sub-menu {
   position: absolute;
-  top: 37px;
+  top: 51px;
   left: -7px;
   z-index: 999;
 
   display: none;
   width: 144px;
-  padding: 6px 0;
+  padding: 4px 0 8px;
   margin: 0;
 
   color: #000000;
 
-  background: #ffffff;
+  background: #ffffff url(../img/line.png) no-repeat center 38px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
@@ -126,12 +144,13 @@ h3 {
 
 .sub-menu li {
   display: block;
-  margin: 4px 0;
+  padding: 0;
 }
 
 .sub-menu a {
-  padding: 6px 22px;
+  padding: 7px 22px;
 
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -142,18 +161,16 @@ h3 {
 }
 
 .sub-menu .new-good {
-  padding-bottom: 10px;
-
+  margin-bottom: 11px;
   font-weight: bold;
 
-  background: #ffffff url(../img/line.png) no-repeat bottom;
 }
 
-.sub-menu > li > a:hover {
+.sub-menu a:hover {
   background: #fbded7;
 }
 
-.sub-menu > li > a:active {
+.sub-menu a:active {
   background: #f6b5a5;
 }
 
@@ -164,20 +181,93 @@ h3 {
 
 
 .user-block {
-  width: 267px;
+  max-width: 267px;
   float: right;
+  padding-top: 13px;
+}
+
+.user-block a {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.user-block  .search-btn {
+
+  padding: 16px;
+  margin: 0 10px 0 5px;
+
+  font-size: 0;
+  line-height: 0;
+
+  background: rgba(255, 255, 255, 0.2) url(../img/sprite.png) no-repeat;
+  background-position: -3px -406px;
+  border-radius: 50%;
+}
+
+.user-block  .search-btn:hover {
+  background: rgba(255, 255, 255, 1) url(../img/sprite.png) no-repeat;
+  background-position: -3px -261px;
+}
+
+.user-block  .user-login {
+  padding: 8px 16px 8px 43px;
+  margin-right: 10px;
+
+  background: rgba(255, 255, 255, 0.2) url(../img/sprite.png) no-repeat;
+  background-position: 7px -299px;
+  border-radius: 25px;
+}
+
+.user-block  .user-login:hover {
+  color: #000000;
+
+  background: rgba(255, 255, 255, 1) url(../img/sprite.png) no-repeat;
+  background-position: 7px -369px;
+}
+
+.user-block .user-basket {
+  padding: 8px 16px 8px 43px;
+
+  background: rgba(255, 255, 255, 0.2) url(../img/sprite.png) no-repeat;
+  background-position: 7px -652px;
+  border-radius: 25px;
 }
 
 .header-contact {
-  width: 267px;
+  max-width: 267px;
   float: right;
+  padding-top: 18px;
+
+  text-align: right;
 }
 
+.header-contact p {
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.header-contact a {
+  font-size: 22px;
+  line-height: 24px;
+  color: inherit;
+  text-decoration: inherit;
+}
+/*==============================*/
+
+/*=====Хлебные крошки=====*/
 .breadcrumbs {
   width: 267px;
   float: left;
 }
-
+/*==============================*/
 .slider-h {
   position: relative;
 
