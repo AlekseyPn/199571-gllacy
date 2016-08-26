@@ -1174,7 +1174,7 @@ input[type="search"]:valid ~ label {
 
   background: #f8f7f4;
   border-radius: 5px;
-  border-bottom: 15px solid transparent;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4)
 }
 .login-form input{
   margin-bottom: 20px;
