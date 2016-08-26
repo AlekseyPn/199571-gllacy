@@ -52,6 +52,20 @@ img {
   height: auto;
 }
 
+input {
+  border: 1px solid rgba(179, 179, 179, 0.52);
+  border-radius: 5px;
+}
+
+input:hover {
+  border:2px solid rgba(179, 179, 179, 0.52);
+}
+
+input:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
+}
+
 .clearfix {
   content: '';
 
@@ -66,6 +80,8 @@ img {
 }
 
 .main-header {
+  position: relative;
+
   padding-top: 10px;
 }
 
@@ -155,7 +171,7 @@ img {
 
   color: #000000;
 
-  background: #ffffff url(../img/line.png) no-repeat center 38px;
+  background: #ffffff;
   border-radius: 5px;
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
@@ -181,10 +197,25 @@ img {
 
 }
 
-.sub-menu .new-good {
+.sub-menu .new-good a {
   margin-bottom: 11px;
   font-weight: bold;
+}
 
+.sub-menu .new-good {
+  position: relative;
+}
+
+.sub-menu .new-good::after {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 6px;
+  right: 6px;
+
+  height: 1px;
+
+  background: #d1d0ce;
 }
 
 .sub-menu a:hover {
@@ -224,6 +255,8 @@ img {
 
 
 .user-block {
+  position: relative;
+
   max-width: 267px;
   float: right;
   padding-top: 13px;
@@ -231,21 +264,19 @@ img {
   font-size: 0;
 }
 
-.user-block a {
-  display: inline-block;
-  vertical-align: top;
+.user-block .user-item {
+  float: left;
 
-  font-family: 'Roboto Medium', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-
   text-decoration: none;
   color: #ffffff;
+
+  cursor: pointer;
 }
 
-.user-block  .search-btn {
-  position: relative;
+.search-box  .search-btn {
   width: 32px;
   height: 32px;
   margin: 0 10px 0 5px;
@@ -258,12 +289,14 @@ img {
   border-radius: 50%;
 }
 
-.user-block  .search-btn:hover {
+.search-box  .search-btn:hover {
+  padding-bottom: 10px;
+
   background: rgba(255, 255, 255, 1) url(../img/sprite.png) no-repeat;
   background-position: -2px -261px;
 }
 
-.user-block  .user-login {
+.login-box  .user-login {
   padding: 8px 16px 8px 43px;
   min-width: 94px;
   margin-right: 9px;
@@ -273,7 +306,7 @@ img {
   border-radius: 25px;
 }
 
-.user-block  .user-login:hover {
+.login-box  .user-login:hover {
   color: #000000;
 
   background: rgba(255, 255, 255, 1) url(../img/sprite.png) no-repeat;
@@ -307,7 +340,6 @@ img {
 .header-contact {
   max-width: 267px;
   float: right;
-  padding-top: 18px;
 
   text-align: right;
 }
@@ -341,6 +373,8 @@ body > input[type="radio"] {
   background-repeat: no-repeat;
   background-position: top center;
 
+  -webkit-transition: background-color 0.5s ease,
+              background-image 0.5s ease;
   transition: background-color 0.5s ease,
               background-image 0.5s ease;
 }
@@ -359,7 +393,7 @@ body > input[type="radio"] {
 }
 
 .slider .slide-title {
-  width: 700px;
+  width: 710px;
   margin: 0 auto;
   margin-bottom: 30px;
 
@@ -457,8 +491,8 @@ body > input[type="radio"] {
 }
 /*==============================*/
 
-/*=====Стили для конпок главного контента=====*/
-.btn {;
+/*=====Стили для кнопок главного контента=====*/
+.btn {
   padding: 12px 21px;
 
   font-size: 18px;
@@ -466,6 +500,7 @@ body > input[type="radio"] {
   color: #ffffff;
   text-decoration: none;
 
+  background-color: #ec583c;
   background: -moz-linear-gradient(top, #f16742 0%, #ca3a26 100%);
   background: -webkit-linear-gradient(top, #f16742 0%, #ca3a26 100%);
   background: linear-gradient(to bottom, #f16742 0%, #ca3a26 100%);
@@ -477,7 +512,7 @@ body > input[type="radio"] {
 }
 
 .btn:hover {
-
+  background-color: #f07a63;
   background: -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
@@ -485,6 +520,7 @@ body > input[type="radio"] {
 }
 
 .btn:active {
+  background-color: #d84833;
   background: -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
@@ -768,7 +804,7 @@ body > input[type="radio"] {
 
 .subscribe-form input[type="email"] {
   width: 365px;
-  height: 48px;
+  height: 46px;
   margin-right: 10px;
   padding: 10px 15px;
 
@@ -786,6 +822,30 @@ body > input[type="radio"] {
 .subscribe-form input[type="email"]:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
   border-radius: 4px;
+}
+
+.subscribe-form label {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+
+  transition: all 0.2s;
+}
+
+input[type="email"]:focus ~ .subscr-email {
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+
+  transform: translateY(-28px);
+}
+
+input[type="email"]:valid ~ .subscr-email {
+  transform: translateY(-28px);
 }
 
 .form-btn {
@@ -817,7 +877,7 @@ body > input[type="radio"] {
 
   position: absolute;
   top: 145px;
-  left: 280px;
+  left: 302px;
 
   width: 79px;
   height: 139px;
@@ -828,7 +888,7 @@ body > input[type="radio"] {
 .about-comp {
   position: absolute;
   top: 62px;
-  right: 49px;
+  right: 100px;
 
   padding: 30px 25px;
 
@@ -996,7 +1056,6 @@ figure {
   width: 17px;
   height: 14px;
 
-  background-color: #ffffff;
   background-image: url(../img/sprite.png);
   background-position: -9px -502px;
 }
@@ -1004,4 +1063,183 @@ figure {
 .footer-copyright {
   width: 267px;
   float: right;
+}
+
+.footer-copyright .copyright-logo {
+  display: block;
+  width: 108px;
+  height: 38px;
+  margin: 0 auto;
+}
+
+.footer-copyright .copyright-text {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.copyright-text a {
+  color: inherit;
+}
+
+.copyright-text a:hover {
+  color: #ffbc9e;
+}
+
+/*====Модальные окна и поп-ап*=====*/
+.btn-login {
+  border: none;
+}
+
+.user-block label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+
+  transition: all 0.2s;
+}
+
+input:valid ~ label,
+input:focus ~ label {
+
+}
+
+.user-block input {
+  width: 100%;
+  padding: 12px 15px;
+}
+
+.user-block input:hover,
+.user-block input:focus {
+  margin-bottom: 18px;
+}
+
+.search-box {
+  border-bottom: 15px solid transparent
+}
+
+.search-form {
+  position: absolute;
+  top: 50px;
+  right: 230px;
+  z-index: 3;
+
+  display: none;
+  width: 341px;
+  height: 85px;
+  padding: 20px 15px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.search-form label {
+  top: 29px;
+  left: 33px;
+
+  transition: all 0.2s;
+}
+
+input[type="search"]:focus ~ label,
+input[type="search"]:valid ~ label {
+  transform: translateY(-25px);
+}
+
+.search-box:hover .search-form {
+  display: block;
+}
+
+.login-box {
+  position: relative;
+  border-bottom: 15px solid transparent;
+}
+
+.login-form {
+  position: absolute;
+  top: 37px;
+  right: 9px;
+  z-index: 4;
+
+  display: none;
+  padding: 20px 18px;
+  width: 277px;
+  height: 214px;
+
+  background: #f8f7f4;
+  border-radius: 5px;
+  border-bottom: 15px solid transparent;
+}
+.login-form input{
+  margin-bottom: 20px;
+}
+
+.login-form .btn-login {
+  float: left;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.login-form a {
+  float: left;
+
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.login-form a:hover,
+.login-form a:active {
+  color: #e84d37;
+}
+
+.login-form .label-email {
+  top:28px;
+  left: 32px;
+}
+
+.login-form .label-pass {
+  top: 90px;
+  left: 32px;
+}
+
+.login-form input[type="email"]:focus ~ .label-email {
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+
+  transform: translateY(-24px);
+}
+
+.login-form input[type="email"]:valid ~ .label-email {
+  font-size: 11px;
+  line-height: 13px;
+
+  transform: translateY(-24px);
+}
+
+
+.login-form input[type="password"]:focus ~ .label-pass {
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+
+  transform: translateY(-23px);
+}
+
+.login-form input[type="password"]:valid ~ .label-pass {
+  font-size: 11px;
+  line-height: 13px;
+
+  transform: translateY(-23px);
+}
+
+.login-box:hover .login-form {
+  display: block;
 }

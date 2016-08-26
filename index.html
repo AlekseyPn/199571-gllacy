@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <title>HTML Academy: Глейси</title>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
   </head>
   <body>
     <input type="radio" name="btn-slide" id="btn-1" checked>
@@ -19,9 +21,9 @@
                 <img class="logo-img" src="img/logo-index.svg" alt="Глейси-шоп" width="154"  height="64">
           </a>
           <ul>
-            <li class="sub-item"><a class="active-item" href="catalog.html">Каталог</a><!--Не забыть вернуть в суб меню-->
+            <li class="sub-item"><a class="active-item" href="catalog.html">Каталог</a>
               <ul class="sub-menu">
-                <li><a class="new-good" href="#">Новинки</a>
+                <li class="new-good"><a  href="#">Новинки</a>
                 </li>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="catalog-sherb.html">Щербеты</a></li>
@@ -34,16 +36,33 @@
           </ul>
         </nav>
         <div class="user-block">
-          <a class="search-btn" href="#"></a>
-          <a class="user-login" href="#">Вход</a>
-          <a class="user-basket" href="#">Пусто</a>
-        </div>
+          <div class="search-box user-item">
+            <div class="search-btn"></div>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <input type="search" name="search-form" id="search-form" required>
+              <label for="search-form">Что ищем?</label>
+            </form>
+          </div>
+          <div class="login-box user-item">
+            <div class="user-login">Вход</div>
+            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+              <input type="email" name="email" id="email-login" required>
+              <label class="label-email" for="email-login">Электронная почта</label>
+              <input type="password" name="password" id="password-login" required>
+              <label class="label-pass" for="password-login">Пароль</label>
+              <button class="btn btn-login" type="submit">Войти</button>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </form>
+          </div>
+          <div class="user-basket user-item">Пусто</div>
         <div class="header-contact">
           <p>С 10 до 20,ежедневно</p>
           <a href="tel:+88124502525">8 812 450-25-25</a>
         </div>
        </div>
-      </header>
+      </div>
+     </header>
 
       <!-- Слайдер -->
       <div class="container">
@@ -131,7 +150,9 @@
             <div class="form-wrap">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
               <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-                <input type="email" name="email" id="email" placeholder="Электронная почта">
+                <input type="email" name="email" id="email" required >
+                <label class="subscr-email" for="email">Электронная почта</label>
+
                 <button class="btn form-btn" type="submit">Отправить</button>
               </form>
             </div>
@@ -169,8 +190,8 @@
             </div>
           </div>
           <div class="footer-copyright">
-            <a href="https://htmlacademy.ru/"><img src="img/foot-logo.svg" alt="HTMLacademy"></a>
-            <p>Сделано в <span class="underline">HTML Academy</span> © 2016</p>
+            <a class="copyright-logo" href="https://htmlacademy.ru/"><img src="img/foot-logo.svg" alt="HTMLacademy"></a>
+            <p class="copyright-text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy &copy;</a> 2016</p>
           </div>
         </div>
       </footer>
