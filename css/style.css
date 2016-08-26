@@ -149,8 +149,6 @@ input:focus {
 }
 
 .sub-item > a:active {
-  -webkit-box-shadow: inset 0px 2px 1px 0px rgba(105,105,105,1);
-  -moz-box-shadow: inset 0px 2px 1px 0px rgba(105,105,105,1);
   box-shadow: inset 0px 2px 1px 0px rgba(105,105,105,1);;
 }
 
@@ -173,8 +171,6 @@ input:focus {
 
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.4);
 
 }
@@ -415,7 +411,6 @@ body > input[type="radio"] {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   background: #f26843;
-  background: -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
@@ -423,14 +418,12 @@ body > input[type="radio"] {
 }
 
 .slide-btn:hover {
-  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .slide-btn:active {
-  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
@@ -501,7 +494,6 @@ body > input[type="radio"] {
   text-decoration: none;
 
   background-color: #ec583c;
-  background: -moz-linear-gradient(top, #f16742 0%, #ca3a26 100%);
   background: -webkit-linear-gradient(top, #f16742 0%, #ca3a26 100%);
   background: linear-gradient(to bottom, #f16742 0%, #ca3a26 100%);
   border-radius: 100px;
@@ -513,7 +505,6 @@ body > input[type="radio"] {
 
 .btn:hover {
   background-color: #f07a63;
-  background: -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 1px 2px rgba(172, 16, 0, 1);
@@ -521,7 +512,6 @@ body > input[type="radio"] {
 
 .btn:active {
   background-color: #d84833;
-  background: -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 0.63);
@@ -833,6 +823,8 @@ body > input[type="radio"] {
   line-height: 24px;
   color: #999999;
 
+  -webkit-transition:all 0.2s;
+
   transition: all 0.2s;
 }
 
@@ -841,11 +833,14 @@ input[type="email"]:focus ~ .subscr-email {
   line-height: 13px;
   color: #5b9ddf;
 
-  transform: translateY(-28px);
+  -webkit-transform: translateY(-28px);
+
+          transform: translateY(-28px);
 }
 
 input[type="email"]:valid ~ .subscr-email {
-  transform: translateY(-28px);
+  -webkit-transform: translateY(-28px);
+          transform: translateY(-28px);
 }
 
 .form-btn {
@@ -1102,6 +1097,8 @@ figure {
   line-height: 24px;
   color: #999999;
 
+  -webkit-transition:all 0.2s;
+
   transition: all 0.2s;
 }
 
@@ -1140,16 +1137,29 @@ input:focus ~ label {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.search-form label {
+.search-form .label-search {
   top: 29px;
   left: 33px;
+
+  -webkit-transition:all 0.2s;
 
   transition: all 0.2s;
 }
 
-input[type="search"]:focus ~ label,
-input[type="search"]:valid ~ label {
-  transform: translateY(-25px);
+input[type="search"]:focus ~ .label-search {
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+input[type="search"]:valid ~ .label-search {
+  font-size: 11px;
+  line-height: 13px;
+
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
 }
 
 .search-box:hover .search-form {
@@ -1214,14 +1224,18 @@ input[type="search"]:valid ~ label {
   line-height: 13px;
   color: #5b9ddf;
 
-  transform: translateY(-24px);
+  -webkit-transform: translateY(-24px);
+
+          transform: translateY(-24px);
 }
 
 .login-form input[type="email"]:valid ~ .label-email {
   font-size: 11px;
   line-height: 13px;
 
-  transform: translateY(-24px);
+  -webkit-transform: translateY(-24px);
+
+          transform: translateY(-24px);
 }
 
 
@@ -1230,14 +1244,18 @@ input[type="search"]:valid ~ label {
   line-height: 13px;
   color: #5b9ddf;
 
-  transform: translateY(-23px);
+  -webkit-transform: translateY(-23px);
+
+          transform: translateY(-23px);
 }
 
 .login-form input[type="password"]:valid ~ .label-pass {
   font-size: 11px;
   line-height: 13px;
 
-  transform: translateY(-23px);
+  -webkit-transform: translateY(-23px);
+
+          transform: translateY(-23px);
 }
 
 .login-box:hover .login-form {
