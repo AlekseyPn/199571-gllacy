@@ -1442,6 +1442,13 @@ input[type="checkbox"]:disabled + label::after {
   border-radius: 50%;
 }
 
+.paginator .link-paginator:active {
+  color: #000000;
+
+  background: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+}
+
 .paginator .check:hover {
   color: #000000;
 
