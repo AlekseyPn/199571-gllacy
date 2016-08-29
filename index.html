@@ -35,14 +35,14 @@
         </nav>
         <div class="user-block">
           <div class="search-box user-item">
-            <div class="search-btn"></div>
+            <a class="search-btn" href="#"></a>
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
               <input type="search" name="search-form" id="search-form" required>
               <label class="label-search" for="search-form">Что ищем?</label>
             </form>
           </div>
           <div class="login-box user-item">
-            <div class="user-login">Вход</div>
+            <a class="user-login" href="#">Вход</a>
             <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
               <input type="email" name="email" id="email-login" required>
               <label class="label-email" for="email-login">Электронная почта</label>
@@ -165,7 +165,7 @@
             <p>Для заказов по телефону:</p>
             <p>8 812 450-25-25</p>
             <p>(с 10 до 20 ежедневно)</p>
-            <a class="btn" href="#">Форма обратной связи</a>
+            <a class="btn feedback-btn" href="feedback.html">Форма обратной связи</a>
           </div>
         </div>
       <!-- Footer -->
@@ -194,5 +194,23 @@
         </div>
       </footer>
     </div>
+    <div class="modal-feedback">
+        <button class="modal-feedback-close" type="button"></button>
+        <p>Мы обязательно вам ответим!</p>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <input class="feedback-input feedback-name" type="text" name="name" id="name-input" required>
+          <label for="name-input">Как вас зовут?</label>
+
+          <input class="feedback-input feedback-email" type="email" name="email" id="email-input" required>
+          <label for="email-input">Ваша почта для ответа?</label>
+
+          <textarea class="feedback-input feedback-text" name="text" cols="30" rows="10" id="text-input" required></textarea>
+          <label for="text-input">Напишите что нибудь...</label>
+
+          <button class="btn feedback-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="modal-overlay"></div>
+      <script src="js/script.js"></script>
   </body>
 </html>
