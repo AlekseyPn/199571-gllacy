@@ -7,10 +7,17 @@ link.addEventListener('click', function(event){
   event.preventDefault();
   popup.classList.add('modal-feedback-show');
   overlay.classList.add('modal-overlay-show');
+  popup.scrollIntoView(top);
 });
 
 close.addEventListener('click', function(event) {
   event.preventDefault();
   popup.classList.remove('modal-feedback-show');
-  overlay.classList.remove('modal-overlay-show')
+  overlay.classList.remove('modal-overlay-show');
+})
+
+overlay.addEventListener('click', function(event){
+  event.preventDefault();
+  popup.classList.remove('modal-feedback-show');
+  overlay.classList.remove('modal-overlay-show');
 })
