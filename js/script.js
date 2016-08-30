@@ -17,8 +17,10 @@ link.addEventListener('click', function(event){
   popup.scrollIntoView(top);
   if (storage) {
     yoname.value = storage;
+    email.focus();
+  } else {
+    yoname.focus;
   }
-  yoname.focus();
 });
 
 close.addEventListener('click', function(event) {
