@@ -1990,6 +1990,9 @@ input[type="search"]:valid ~ .label-search {
   height: 44px;
   padding: 9px 14px;
   margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .modal-feedback .feedback-text {
