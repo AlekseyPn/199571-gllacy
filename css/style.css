@@ -260,6 +260,7 @@ input:focus {
 /*======================*/
 
 /*=====Блок для пользователя=====*/
+
 .user-block {
   position: relative;
 
@@ -416,12 +417,12 @@ body > input[type="radio"] {
 
 .slider .slide-btn {
   display: inline-block;
+  vertical-align: top;
   padding: 12px 50px;
 
   font-weight: bold;
   font-size: 31px;
   line-height: 42px;
-  vertical-align: top;
   color: #ffffff;
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
@@ -456,6 +457,7 @@ body > input[type="radio"] {
 
 .slide-control label{
   display: inline-block;
+  vertical-align: top;
   width: 17px;
   height: 17px;
   margin-right: 8px;
@@ -660,13 +662,13 @@ body > input[type="radio"] {
 .product-item .desc-link {
   display: inline-block;
   vertical-align: top;
+  padding: 0 5px;
 
   color: #ffffff;
   line-height: 22px;
   font-weight: 400;
   font-size: 16px;
   text-align: center;
-  padding: 0 5px;
 }
 
 .product-item .desc-link:hover, .desc-link:active {
@@ -784,7 +786,7 @@ body > input[type="radio"] {
 }
 
 .form-wrap {
-  padding: 25px 20px 31px;
+  padding: 27px 20px 31px;
 
   background: #f8f7f4;
   border-radius: 15px;
@@ -1568,8 +1570,6 @@ input[type="checkbox"]:disabled + label::after {
   font-size: 13px;
   line-height: 18px;
   text-align: left;
-
-  box-sizing: border-box;
 }
 
 .document-item a {
@@ -1666,7 +1666,7 @@ input[type="checkbox"]:disabled + label::after {
 }
 
 .search-box {
-  border-bottom: 15px solid transparent
+  border-bottom: 15px solid transparent;
 }
 
 .search-form {
@@ -1698,6 +1698,7 @@ input[type="search"]:focus ~ .label-search {
   font-size: 11px;
   line-height: 13px;
   color: #5b9ddf;
+
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
 }
@@ -1773,7 +1774,6 @@ input[type="search"]:valid ~ .label-search {
   color: #5b9ddf;
 
   -webkit-transform: translateY(-24px);
-
           transform: translateY(-24px);
 }
 
@@ -1782,28 +1782,24 @@ input[type="search"]:valid ~ .label-search {
   line-height: 13px;
 
   -webkit-transform: translateY(-24px);
-
           transform: translateY(-24px);
 }
-
 
 .login-form input[type="password"]:focus ~ .label-pass {
   font-size: 11px;
   line-height: 13px;
   color: #5b9ddf;
 
-  -webkit-transform: translateY(-23px);
-
-          transform: translateY(-23px);
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
 }
 
 .login-form input[type="password"]:valid ~ .label-pass {
   font-size: 11px;
   line-height: 13px;
 
-  -webkit-transform: translateY(-23px);
-
-          transform: translateY(-23px);
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
 }
 
 .login-box:hover .login-form {
@@ -1811,6 +1807,7 @@ input[type="search"]:valid ~ .label-search {
 }
 
 /*=====Корзина=====*/
+
 .basket-item {
   position: relative;
   border-bottom: 15px solid transparent;
@@ -1901,11 +1898,13 @@ input[type="search"]:valid ~ .label-search {
 }
 
 .delete-product::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .delete-product::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .drop-summary {
@@ -1940,9 +1939,13 @@ input[type="search"]:valid ~ .label-search {
 
   background: #f8f7f4;
   border-radius: 5px;
+
+  -webkit-animation: modal-animation 0.6s;
+
+          animation: modal-animation 0.6s;
 }
 
-.modal-feedback-close {
+.modal-close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -1958,8 +1961,8 @@ input[type="search"]:valid ~ .label-search {
   cursor: pointer;
 }
 
-.modal-feedback-close::before,
-.modal-feedback-close::after {
+.modal-close::before,
+.modal-close::after {
   content: '';
   position: absolute;
   top: 7px;
@@ -1971,12 +1974,14 @@ input[type="search"]:valid ~ .label-search {
   background-color: #000000;
 }
 
-.modal-feedback-close::before {
-  transform: rotate(45deg);
+.modal-close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
-.modal-feedback-close::after {
-  transform: rotate(-45deg);
+.modal-close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .modal-feedback p {
@@ -2036,7 +2041,9 @@ input[type="search"]:valid ~ .label-search {
   line-height: 13px;
   color: #5b9ddf;
 
-  transform: translateY(-26px);
+  -webkit-transform: translateY(-26px);
+
+          transform: translateY(-26px);
 }
 
 .feedback-input:valid + label {
@@ -2044,7 +2051,9 @@ input[type="search"]:valid ~ .label-search {
   line-height: 13px;
   color: #999999;
 
-  transform: translateY(-26px);
+  -webkit-transform: translateY(-26px);
+
+          transform: translateY(-26px);
 }
 
 .feedback-btn {
@@ -2075,4 +2084,83 @@ input[type="search"]:valid ~ .label-search {
 
 .modal-overlay-show {
   display: block;
+}
+
+.modal-map {
+  position: fixed;
+  top: 22%;
+  left: 50%;
+  z-index: 20;
+
+  display: none;
+  width: 1148px;
+  height: 436px;
+  margin-left: -574px;
+
+  background: #e9e5dc url(../img/map.jpg);
+  border: 7px solid #ffffff;
+
+  -webkit-animation: modal-animation 0.6s;
+
+          animation: modal-animation 0.6s;
+}
+
+.modal-map-show {
+  display: block;
+}
+
+.modal-map-close {
+  top: 5px;
+  right: -30px;
+}
+
+.modal-map-close::before,
+.modal-map-close::after {
+  background-color: #ffffff;
+}
+
+/*=====================*/
+
+@-webkit-keyframes modal-animation {
+  0% {
+    -webkit-transform: translateX(-1800px);
+            transform: translateX(-1800px);
+  }
+
+  70% {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+
+  90% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes modal-animation {
+  0% {
+    -webkit-transform: translateX(-1800px);
+            transform: translateX(-1800px);
+  }
+
+  70% {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+
+  90% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }

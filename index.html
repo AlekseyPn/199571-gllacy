@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <title>HTML Academy: Глейси</title>
   </head>
@@ -195,22 +195,27 @@
       </footer>
     </div>
     <div class="modal-feedback">
-        <button class="modal-feedback-close" type="button"></button>
-        <p>Мы обязательно вам ответим!</p>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <input class="feedback-input feedback-name" type="text" name="your-name" id="name-input" required>
-          <label for="name-input">Как вас зовут?</label>
+      <button class="modal-close" type="button" title="Закрыть"></button>
+      <p>Мы обязательно вам ответим!</p>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <input class="feedback-input feedback-name" type="text" name="your-name" id="name-input" required>
+        <label for="name-input">Как вас зовут?</label>
 
-          <input class="feedback-input feedback-email" type="email" name="email" id="email-input" required>
-          <label for="email-input">Ваша почта для ответа?</label>
+        <input class="feedback-input feedback-email" type="email" name="email" id="email-input" required>
+        <label for="email-input">Ваша почта для ответа?</label>
 
-          <textarea class="feedback-input feedback-text" name="text" cols="30" rows="10" id="text-input" required></textarea>
-          <label for="text-input">Напишите что нибудь...</label>
+        <textarea class="feedback-input feedback-text" name="text" cols="30" rows="10" id="text-input" required></textarea>
+        <label for="text-input">Напишите что нибудь...</label>
 
-          <button class="btn feedback-btn" type="submit">Отправить</button>
-        </form>
-      </div>
-      <div class="modal-overlay"></div>
-      <script src="js/script.js"></script>
+        <button class="btn feedback-btn" type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="modal-map">
+      <button class="modal-close modal-map-close" type="button" title="Закрыть"></button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123607!2d30.320894615607262!3d59.93879686904854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1472576143500" width="1134" height="422" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="modal-overlay"></div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
