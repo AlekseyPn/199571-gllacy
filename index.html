@@ -2,14 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-    <input type="radio" name="btn-slide" id="btn-1" checked>
-    <input type="radio" name="btn-slide" id="btn-2">
-    <input type="radio" name="btn-slide" id="btn-3">
+    <input class="btn-1" type="radio" name="btn-slide" id="btn-1" checked>
+    <input class="btn-2" type="radio" name="btn-slide" id="btn-2">
+    <input class="btn-3" type="radio" name="btn-slide" id="btn-3">
     <div class="page-wrapper">
       <!-- Шапка -->
       <header class="main-header">
@@ -19,7 +19,7 @@
                 <img class="logo-img" src="img/logo-index.svg" alt="Глейси-шоп" width="154"  height="64">
           </a>
           <ul>
-            <li class="sub-item"><a class="active-item" href="catalog.html">Каталог</a>
+            <li class="nav-item sub-item"><a class="active-item" href="catalog.html">Каталог</a>
               <ul class="sub-menu">
                 <li class="new-good"><a  href="#">Новинки</a>
                 </li>
@@ -65,17 +65,17 @@
       <!-- Слайдер -->
       <div class="container">
         <div class="slider">
-          <div class="slide" id="slide-1">
+          <div class="slide slide-1" id="slide-1">
             <div class="slide-title">Крем-брюле и пломбир
   с малиновым джемом</div>
             <a href="bonus.html" class="slide-btn">Давайте оба!</a>
           </div>
-          <div class="slide" id="slide-2">
+          <div class="slide slide-2" id="slide-2">
             <div class="slide-title">Шоколадный пломбир
   и лимонный сорбет </div>
             <a href="bonus.html" class="slide-btn">Давайте оба!</a>
           </div>
-          <div class="slide" id="slide-3">
+          <div class="slide slide-3" id="slide-3">
             <div class="slide-title">Пломбир с помадкой
   и клубничный щербет</div>
             <a href="bonus.html" class="slide-btn">Давайте оба!</a>

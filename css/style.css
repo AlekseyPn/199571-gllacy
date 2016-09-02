@@ -110,8 +110,16 @@ input {
     color: #fff;
 }
 
-.nav-item>a:hover {
-    color: #ffbc9e;
+.nav-item > a:hover {
+    padding: 7px 11px 7px 14px;
+    color: #000;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.nav-item > a:active {
+  box-shadow: inset 0 2px 1px 0 #696969;
 }
 
 .header-nav .index-logo {
@@ -126,18 +134,6 @@ input {
 .index-logo img {
     width: 154px;
     height: 64px;
-}
-
-.sub-item .active-item:hover {
-    padding: 7px 11px 7px 14px;
-    color: #000;
-    text-decoration: none;
-    background: #fff;
-    border-radius: 15px;
-}
-
-.sub-item .active-item:active {
-    box-shadow: inset 0 2px 1px 0 #696969;
 }
 
 .header-nav .sub-menu {
@@ -170,7 +166,7 @@ input {
     text-decoration: none;
 }
 
-.sub-menu .new-good a {
+.new-good a {
     margin-bottom: 11px;
     font-weight: 700;
 }
@@ -401,26 +397,30 @@ body>input[type=radio] {
     background-color: rgba(255,255,255,.4);
 }
 
-#btn-1:checked~.page-wrapper #slide-1,#btn-2:checked~.page-wrapper #slide-2,#btn-3:checked~.page-wrapper #slide-3 {
+.btn-1:checked~.page-wrapper .slide-1,
+.btn-2:checked~.page-wrapper .slide-2,
+.btn-3:checked~.page-wrapper .slide-3 {
     display: block;
 }
 
-#btn-1:checked~.page-wrapper {
+.btn-1:checked~.page-wrapper {
     background-color: #849d8f;
     background-image: url(../img/slide-1.png);
 }
 
-#btn-2:checked~.page-wrapper {
+.btn-2:checked~.page-wrapper {
     background-color: #8996a6;
     background-image: url(../img/slide-2.png);
 }
 
-#btn-3:checked~.page-wrapper {
+.btn-3:checked~.page-wrapper {
     background-color: #9d8b84;
     background-image: url(../img/slide-3.png);
 }
 
-#btn-1:checked~.page-wrapper label[for=btn-1],#btn-2:checked~.page-wrapper label[for=btn-2],#btn-3:checked~.page-wrapper label[for=btn-3] {
+.btn-1:checked~.page-wrapper label[for=btn-1],
+.btn-2:checked~.page-wrapper label[for=btn-2],
+.btn-3:checked~.page-wrapper label[for=btn-3] {
     background-color: #fff;
 }
 
@@ -849,7 +849,7 @@ input[type=email]:valid~.subscr-email {
 }
 
 .sort-wrapper .sort-filter {
-    width: 110%;
+    width: 120%;
     padding: 8px 15px;
     font-weight: 400;
     font-size: 16px;
@@ -858,10 +858,6 @@ input[type=email]:valid~.subscr-email {
     background-color: rgba(255,255,255,.2);
     outline: none;
     border: none;
-}
-
-.sort-filter option {
-    width: 100%;
 }
 
 .sort-wrapper::before {
