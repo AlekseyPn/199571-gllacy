@@ -563,6 +563,7 @@ body>input[type=radio] {
 .about-shop .about-text,.product-item .desc-link {
     display: inline-block;
     vertical-align: top;
+    max-height: 54px;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
