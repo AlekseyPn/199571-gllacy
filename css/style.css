@@ -563,7 +563,6 @@ body>input[type=radio] {
 .about-shop .about-text,.product-item .desc-link {
     display: inline-block;
     vertical-align: top;
-    max-height: 54px;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -1077,7 +1076,7 @@ input[type=checkbox]:disabled+label::after {
 .filter-btn {
     width: 146px;
     height: 36px;
-    margin-top: 29px;
+    margin-top: 30px;
     padding: 8px 33px;
     font-weight: 400;
     font-size: 16px;
@@ -1159,8 +1158,8 @@ input[type=checkbox]:disabled+label::after {
 }
 
 .catalog-item .desc-link {
-    display: inline-block;
-    vertical-align: top;
+    display: block;
+    height: 52px;
     z-index: 9;
     color: #fff;
     line-height: 22px;
@@ -1168,6 +1167,7 @@ input[type=checkbox]:disabled+label::after {
     font-size: 16px;
     text-align: center;
     padding: 5px 7px;
+    overflow: hidden;
 }
 
 .catalog-item .desc-link:hover,.copyright-text a:hover,.desc-link:active,.document-item a:hover {
