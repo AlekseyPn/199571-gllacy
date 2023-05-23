@@ -1,6 +1,6 @@
 # Личный проект «Глейси»
 
-* Студент: [Алексей Пересмехин](https://up.htmlacademy.ru/htmlcss/14/user/199571).
+* Студент: 
 * Наставник: [Евгений Болтян](https://up.htmlacademy.ru/htmlcss/14/user/83202).
 
 ---
